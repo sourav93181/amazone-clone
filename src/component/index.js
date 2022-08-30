@@ -5,3 +5,4 @@ export { default as InputBox } from "../component/shared/inputbox";
 export { default as TextBox } from "../component/shared/textbox";
 export { default as SearchBar } from "../component/shared/searchCom";
 export { default as Card } from "../component/custom/card";
+export { default as ApiCard } from "../component/custom/apiCard";
