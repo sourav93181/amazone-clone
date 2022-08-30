@@ -1,0 +1,10 @@
+.seachbar-container{
+    display: flex;
+    flex-direction: row;
+}
+.NavBar-search{
+    width: 30vw;
+    height: 4vh;
+    margin: auto;
+    text-align: center;
+}

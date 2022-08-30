@@ -1,0 +1,14 @@
+.card-container{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    width: 15vw;
+    height: 20vh;
+    border: 0.1vw solid gray;
+}
+.card-title{
+    grid-row: 2/ span 1;
+}
+.card-price{
+    grid-row: 3/ span 1;
+}

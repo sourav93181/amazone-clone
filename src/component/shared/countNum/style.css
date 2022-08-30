@@ -1,0 +1,45 @@
+.container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  border: 0.1vw solid black;
+  border-radius: 1vh;
+  height: 10vh;
+  width: 12vw;
+  margin:auto;
+}
+.decrement-button{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 2vw;
+  border: 0.1vh solid black;
+  width: 3vw;
+  height: 6vh;
+  border-radius: 1vh;
+
+}
+.conatainer-val{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 2vw;
+  border: 0.1vh solid black;
+  width: 3vw;
+  height: 6vh;
+  border-radius: 1vh;
+}
+.increment-button{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 2vw;
+  border: 0.1vh solid black;
+  width: 3vw;
+  height: 6vh;
+  border-radius: 1vh;
+}
