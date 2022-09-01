@@ -2,31 +2,24 @@ import React, { useEffect, useState } from 'react';
 import { Card, SearchBar, ApiCard } from '../../component';
 import "./style.css";
 import { useSelector, useDispatch } from "react-redux";
-import { fetchPublicApi } from "../../redux/publicDataSlice";
+import { fetchPublicApi, fetchPublicPopData } from "../../redux/publicDataSlice";
 import { MakeRequest } from '../../utils';
 
 
 export default function MainScreen(props) {
-    const data1 = useSelector((store) => store.publicData).data1;
+    const data = useSelector((store) => store.publicData).data;
     const dispatch = useDispatch();
-
-    useEffect(() => console.log(data1), [data1]);
-
     useEffect(() => {
-        dispatch(fetchPublicApi());
+      dispatch(fetchPublicApi());
+      dispatch(
+        fetchPublicPopData({ drilldowns: "Nation", measures: "Population" })
+      );
     }, []);
-    const count = useSelector((store) => store.counter);
-    const [data, setdata] = useState("");
-    async function updateNewData() {
-        let res = await MakeRequest("https://catfact.ninja/fact").get();
-        console.log(res);
-        setdata(res.fact);
+   
 
-    }
-    useEffect(() => {
-        updateNewData();
-    }, [])
-    const [only100, setonly100] = useState(0)
+    
+    const count = useSelector((store) => store.counter);
+   
     return (
         <div>
             <SearchBar />
@@ -40,9 +33,9 @@ export default function MainScreen(props) {
                     <Card productid={item.id} />
                 ))}
             </div>
-            <div>Facts: {data}</div>
+            <div>Facts:</div>
             <div className="MainScreen-Card-Container">
-                {data1.map((item) => {
+                {data.map((item) => {
 
                     return (<ApiCard title={item.API} descrip={item.Description} />);
                 })}
